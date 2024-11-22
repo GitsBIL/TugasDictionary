@@ -15,13 +15,12 @@ def tampilkan_data():
 
 data_mahasiswa = []
 
-# Program utama
 while True:
     print("\nMenu:")
     print("[L]ihat, [T]ambah, [U]bah, [H]apus, [C]ari, [K]eluar")
     pilihan = input("Pilih menu: ").lower()
 
-    if pilihan == "t":  # Tambah data
+    if pilihan == "t": 
         print("\nTambah Data Mahasiswa")
         nim = input("Masukkan NIM Mahasiswa: ")
         nama = input("Masukkan Nama Mahasiswa: ")
@@ -39,7 +38,7 @@ while True:
         })
         print("Data berhasil ditambahkan!")
 
-    elif pilihan == "u":  # Ubah data
+    elif pilihan == "u":
         nim = input("\nMasukkan NIM Mahasiswa yang ingin diubah: ")
         for mahasiswa in data_mahasiswa:
             if mahasiswa["NIM"] == nim:
@@ -54,7 +53,7 @@ while True:
         else:
             print("Data dengan NIM tersebut tidak ditemukan.")
 
-    elif pilihan == "h":  # Hapus data
+    elif pilihan == "h":
         nim = input("\nMasukkan NIM Mahasiswa yang ingin dihapus: ")
         for mahasiswa in data_mahasiswa:
             if mahasiswa["NIM"] == nim:
@@ -64,10 +63,10 @@ while True:
         else:
             print("Data dengan NIM tersebut tidak ditemukan.")
 
-    elif pilihan == "l":  # Tampilkan data
+    elif pilihan == "l":
         tampilkan_data()
 
-    elif pilihan == "c":  # Cari data
+    elif pilihan == "c": 
         nim = input("\nMasukkan NIM Mahasiswa yang ingin dicari: ")
         for mahasiswa in data_mahasiswa:
             if mahasiswa["NIM"] == nim:
@@ -81,7 +80,7 @@ while True:
         else:
             print("Data dengan NIM tersebut tidak ditemukan.")
 
-    elif pilihan == "k":  # Keluar
+    elif pilihan == "k":
         print("Terima kasih telah menggunakan program ini!")
         break
 
